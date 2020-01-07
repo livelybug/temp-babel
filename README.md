@@ -20,7 +20,8 @@ quasar build
 
 #### 问题
 
-* 第一次编译后, 出现的问题是"vendor.XXXXX.js" 没有被转换成ES5. "vendor.XXXXX.js"貌似来自```node_modules``` 下的某个依赖, 但没找出是哪个依赖.
+* 第一次编译后, IE11 完全打不开
+*  出现的问题是"vendor.XXXXX.js" 没有被转换成ES5. "vendor.XXXXX.js"貌似来自```node_modules``` 下的某个依赖, 但没找出是哪个依赖.
 
 
 
@@ -46,7 +47,7 @@ cd ../../..
 
 #### 问题
 
-* 第二次编译后, IE不兼容, 出现的错误是:
+* 第二次编译后, IE11可以打开网页, 但出现部分错误, 出现的错误日志是:
 
   ```
   "TypeError: Object doesn't support this action
@@ -60,7 +61,7 @@ cd ../../..
 * 找出哪个依赖是ES6的, 导致第一次编译后的错误
 * 在第一次编译时, 把所有的依赖都转成ES5
 * 第一次编译后不要最小化,  然后在第二次编译时引用core-js
-* 在第一次遍以上引用core-js
+* 在第一次编译上引用core-js
 
 
 
